@@ -1,0 +1,10 @@
+.header {
+	min-height: 100vh;
+	margin-bottom: 80px;
+	&.--bg {
+		background-color: $gray-900;
+		background-image: url('../img/logo-white.svg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+}

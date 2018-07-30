@@ -1,0 +1,12 @@
+.footer {
+	margin-top: 104px;
+	height: 45px;
+	&.--bg {
+		background-color: $gray-900;
+	}
+	img {
+		height: 45px;
+		width: 46px;
+		float: right;
+	}
+}
