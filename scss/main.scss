@@ -4,7 +4,15 @@ $gray-100: #F5F5F5;
 
 @import "../scss/utility/css-reset.scss";
 @import "../scss/bootstrap/bootstrap-grid.scss";
+@import "../scss/magnific/main.scss";
+@import "../scss/utility/rfs.scss";
 @import "../scss/utility/font.scss";
 @import "../scss/block/header.scss";
 @import "../scss/block/nav.scss";
 @import "../scss/block/footer.scss";
+@import "../scss/block/gallery.scss";
+@import "../scss/element/btn.scss";
+
+.main {
+	min-height: calc(100vh - 149px);
+}
