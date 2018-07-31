@@ -1,6 +1,15 @@
-function Hamburger(x) {
-	x.classList.toggle("-active");
-}
+(function($) {
+	$(function() {
+		$('.nabar__toggle').click(function() {
+			$('nav').toggleClass('show');
+			$('.nabar__toggle').toggleClass('-active');
+		});
+	});
+})(jQuery);
+
+// function Hamburger(x) {
+// 	x.classList.toggle("-active");
+// }
 
 (function (d, w, c) {
 	(w[c] = w[c] || []).push(function() {
