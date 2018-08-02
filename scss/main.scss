@@ -2,6 +2,11 @@
 $gray-900: #212121;
 $gray-100: #F5F5F5;
 
+::selection {
+	background-color: $gray-900;
+	color: $gray-100;
+}
+
 @import "../scss/utility/css-reset.scss";
 @import "../scss/bootstrap/bootstrap-grid.scss";
 @import "../scss/magnific/main.scss";
