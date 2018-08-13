@@ -1,0 +1,25 @@
+doctype
+html(lang="ru")
+	head
+		include ../jade/meta/services.jade
+		// ⚠️ SEO ⚠️
+		title …
+		meta(name="description" content="…")
+		meta(name="keywords" content="…")
+		meta(name="robots" content="all")
+		link(rel="canonical" href="…")
+		include ../jade/meta/css.jade
+		include ../jade/meta/web-master.jade
+		include ../jade/meta/favicon.jade
+		include ../jade/meta/copyright.jade
+	body
+		include ../jade/block/nav.jade
+		.container.main
+			.row
+				.offset-md-3.col-md-9.col-10
+					h1 Catalogue Raisonné
+					p The Burliuk Foundation is currently in the process of preparing the Catalogue Raisonné of the work of David Davidovich Burliuk. The Burliuk Foundation welcomes anyone that owns a picture by David Davidovich Burliuk to register their work with the Foundation.
+					a.btn(href="/catalogue-raisonne/paintings/") Paintings
+					a.btn(href="/catalogue-raisonne/drawings/") Drawings
+		include ../jade/block/footer.jade
+		include ../jade/meta/js.jade

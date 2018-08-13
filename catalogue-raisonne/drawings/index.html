@@ -25,24 +25,33 @@
       <button class="nabar__toggle" onclick="Hamburger(this)"><span class="hamburger__icon"></span></button><a class="social" href="https://www.facebook.com/davidburliuk.org" target="_blank" rel="nofollow noopener" title="davidburliuk.org"></a><a class="logo" href="/" title="Home Page"></a>
     </div>
     <nav><a href="/">Home</a><a href="/biography/">Biography</a><a href="/catalogue-raisonne/">Catalogue Raisonné</a><a href="/contact/">Contact</a><a href="/directors-advisors-staff/">Directors, Advisors & Staff</a><a href="/user's-policy/">User's Policy</a></nav>
-    <div class="container-fluid header --bg"></div>
-    <div class="container">
+    <div class="container main">
       <div class="row">
-        <div class="offset-3 col-9">
-          <h1>Mission</h1>
-          <p>The mission of the Burliuk Foundation is to expand and protect the legacy of David Davidovich Burliuk, his art, and his ideals.  The Burliuk Foundation was founded in November, 2013. It is directed by descendants of David & Marussia Burliuk.</p>
-          <p><a href="/directors-advisors-staff/">Directors, Advisors & Staff</a></p>
-          <h1>Authentication & Registration</h1>
-          <p>The Burliuk Foundation provides authentication of the works by David Davidovich Burliuk.  The authentication and Registration processes are performed by a committee comprised only of descendants of David & Marussia Burliuk.  The Foundation members provide this service to protect the creative legacy of their ancestor.</p>
-          <p>The Burliuk Foundation will provide written authentication statements based upon the Foundations opinion.</p>
-          <p>For a work of art to be considered for admittance into the registry please provide high resolution images of the front, back, signature and any labels.  They can be emailed for examination.  The Foundation also accepts 5 x 7 inch or larger transparencies. Any provenance, documentation or other details concerning the painting will be helpful, along with exact measurements of the artwork.</p>
-          <p>The Burliuk Foundation does not need to physically inspect each picture, but the letter of authentication will state whether the foundation has physically examined the artwork or not. If we are unsure of the authenticity of the piece after looking at high resolution photos or transparencies, we will then request a physical examination before making a determination.</p>
-          <p><a href="/contact/">Please contact the foundation</a> with any questions you may have.</p>
+        <div class="offset-md-3 col-md-9 col-10">
+          <h1>Image Gallery</h1>
+          <p>Drawings by David D. Burliuk</p>
+          <div class="gallery">
+            <div class="gallery_item"><a class="image-link" href="http://via.placeholder.com/600x600"><img src="http://via.placeholder.com/600x600"></a></div>
+            <div class="gallery_item"><a class="image-link" href="http://via.placeholder.com/600x600"><img src="http://via.placeholder.com/600x600"></a></div>
+            <div class="gallery_item"><a class="image-link" href="http://via.placeholder.com/600x600"><img src="http://via.placeholder.com/600x600"></a></div>
+            <div class="gallery_item"><a class="image-link" href="http://via.placeholder.com/600x600"><img src="http://via.placeholder.com/600x600"></a></div>
+            <div class="gallery_item"><a class="image-link" href="http://via.placeholder.com/600x600"><img src="http://via.placeholder.com/600x600"></a></div>
+            <div class="gallery_item"><a class="image-link" href="http://via.placeholder.com/600x600"><img src="http://via.placeholder.com/600x600"></a></div>
+            <div class="gallery_item"><a class="image-link" href="http://via.placeholder.com/600x600"><img src="http://via.placeholder.com/600x600"></a></div>
+            <div class="gallery_item"><a class="image-link" href="http://via.placeholder.com/600x600"><img src="http://via.placeholder.com/600x600"></a></div>
+          </div>
         </div>
       </div>
     </div>
     <div class="container-fluid footer --bg"><a href="http://romanvolgasov.ru/" target="_blank" rel="nofollow noopener" title="SEO / DESIGN / FRONTEND"><img src="../../img/logo.svg" alt="Roman Volgasov"></a></div>
     <script src="/js/jquery-3.2.1.slim.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="../../js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../js/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(document).ready(function() {
+      	$('.image-link').magnificPopup({type:'image'});
+      });
+    </script>
   </body>
 </html>
