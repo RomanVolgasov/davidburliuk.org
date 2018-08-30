@@ -6,11 +6,11 @@ nav {
 	display: flex;
 	justify-content: flex-end;
 	flex-flow: row wrap;
-	position: absolute;
+	position: relative;
 	right: 2rem;
 	top: 2rem;
 	z-index: 2;
-
+	margin-bottom: 4rem;
 	a {
 		display: inline-block;
 		font-size: 1.5rem;
@@ -40,6 +40,8 @@ nav {
 	display: flex;
 	justify-content: flex-end;
 	flex-flow: column wrap;
+	position: absolute;
+	right: 0;
 	a::after {
 		content: none;
 	}
@@ -47,11 +49,11 @@ nav {
 		background-repeat: no-repeat;
 		height: 1.5rem;
 		width: 1.5rem;
-		margin-right: 5.3rem;
-		margin-top: 8rem;
+		margin-right: 5.5rem;
+		margin-top: 0;
 	}
 	&.dark a.social {
-
+		background-image: url('../../img/facebook-square-brands.svg');
 	}
 	&.dark a.logo {
 		background-image: url('../../img/logo-white.svg');
@@ -67,7 +69,7 @@ nav {
 		background-repeat: no-repeat;
 		height: 56px;
 		width: 26px;
-		margin-right: 5rem;
+		margin-right: 5.3rem;
 		margin-top: 1rem;
 		
 		&.light {
