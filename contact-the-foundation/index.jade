@@ -1,0 +1,47 @@
+doctype
+html(lang="ru")
+	head
+		include ../jade/meta/services.jade
+		// ⚠️ SEO ⚠️
+		title …
+		meta(name="description" content="…")
+		meta(name="keywords" content="…")
+		meta(name="robots" content="all")
+		link(rel="canonical" href="…")
+		include ../jade/meta/css.jade
+		include ../jade/meta/web-master.jade
+		include ../jade/meta/favicon.jade
+		include ../jade/meta/copyright.jade
+	body
+		include ../jade/block/nav-main.jade
+		.container.content
+			.row
+				.offset-md-2.col-md-8
+					h1 Contact
+					p We encourage you to contact the Burliuk Foundation with any questions or concerns you may have.  Please submit images of artwork directly to theburliukfoundation@gmail.com
+					form(action="#" method="POST")
+						.form-group
+							input#name(type="text" name="Name" autocomplete="on" required)
+							label.control-label(for="name" data-error="wrong" data-success="right") Enter name:
+							span.bar
+						.form-group
+							input#phone(type="text" name="Телефон" autocomplete="on" required)
+							label.control-label(for="phone" data-error="wrong" data-success="right") 
+								span.hidden-md-down Enter phone number
+							span.bar
+						.form-group
+							input#e-mail(type="email" name="e-mail" autocomplete="on" required)
+							label.control-label(for="e-mail" data-error="wrong" data-success="right") Enter email address:
+							span.bar
+						.form-group
+							textarea#text-area(name="Текст сообщения")
+							label.control-label(for="text-area") Enter comments or questions:
+							span.bar
+						input(type="hidden" name="_next" value="…")
+						input(type="hidden" name="_subject" value="Feedback")
+						input(type="hidden" name="_language" value="ru")
+						
+						.btn-container
+							button.button(type="submit" value="Send"): span Submit
+		include ../jade/block/footer.jade
+		script(src="../js/main.js")

@@ -1,0 +1,24 @@
+doctype
+html(lang="ru")
+	head
+		include ../jade/meta/services.jade
+		// ⚠️ SEO ⚠️
+		title …
+		meta(name="description" content="…")
+		meta(name="keywords" content="…")
+		meta(name="robots" content="all")
+		link(rel="canonical" href="…")
+		include ../jade/meta/css.jade
+		include ../jade/meta/web-master.jade
+		include ../jade/meta/favicon.jade
+		include ../jade/meta/copyright.jade
+	body
+		include ../jade/block/nav-main.jade
+		.container.content
+			.row
+				.offset-md-2.col-md-8
+					h1 Mission
+					p The mission of the Burliuk Foundation is to expand and protect the legacy of David Davidovich Burliuk, his art, and his ideals.  The Burliuk Foundation was founded in November, 2013. It is directed by descendants of David & Marussia Burliuk.
+					a(href="#") Directors, Advisors & Staff
+		include ../jade/block/footer.jade
+		script(src="../js/main.js")

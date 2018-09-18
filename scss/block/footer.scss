@@ -1,14 +1,35 @@
+.content {
+	min-height: calc(83vh - 52px);
+}
+
 .footer {
 	margin-top: 104px;
-	height: 45px;
+	height: 52px;
 	background-color: $gray-900;
+	// vertical-align:bottom;
 	img {
-		height: 45px;
+		height: 46px;
 		width: 46px;
-		float: right;
 		margin-bottom: 0;
+		position: relative;
+	}
+	.link {
+		align-items: center;
+		display: flex;
+	}
+	.author {
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+	}
+	a {
+		color: $white;
+		margin: 0;
+		position: relative;
+		bottom: 0;
 	}
 	a::after {
+		content: none;
 		display: none;
 	}
 }

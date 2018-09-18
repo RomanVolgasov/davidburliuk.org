@@ -1,0 +1,321 @@
+.contact-form {
+	position: relative;
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: -40px;
+	margin-top: 140px;
+	background-color: #FFF;
+	padding: 20px;
+	width: 100%;
+	border-radius: 5px;
+	@media (max-width: 767px) {
+		max-width: 100%;
+		box-shadow: none;
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+	h2 {
+		margin: 0 0 40px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.btn-container {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+	
+
+.form-radio,
+.form-group {
+	position: relative;
+	margin-top: 2.25rem;
+	margin-bottom: 2.25rem;
+}
+
+.form-group {
+	input {
+		height: 1.9rem;
+	}
+	textarea {
+		resize: none;
+	}
+	input,
+	textarea {
+		display: block;
+		background: none;
+		padding: 0.125rem 0.125rem 0.0625rem;
+		font-size: 1rem;
+		border-width: 0;
+		border-color: transparent;
+		line-height: 1.9;
+		width: 100%;
+		transition: all 0.28s ease;
+		box-shadow: none;
+	}
+	select {
+		width: 100%;
+		font-size: 1rem;
+		height: 1.9rem;
+		padding: 2px;
+		background: none;
+		border: none;
+		line-height: 1.6rem;
+		box-shadow: none;
+	}
+	.control-label {
+		position: absolute;
+		top: 0.25rem;
+		pointer-events: none;
+		padding-left: 0.125rem;
+		z-index: 1;
+		font-size: 1rem;
+		font-weight: normal;
+		transition: all 0.28s ease;
+		color: #000;
+	}
+	select,
+	input:focus,
+	input:valid,
+	textarea:focus,
+	textarea:valid {
+		color: #000;
+	}
+	select ~ .control-label,
+	input:focus ~ .control-label,
+	input:valid ~ .control-label,
+	textarea:focus ~ .control-label,
+	textarea:valid ~ .control-label {
+		font-size: 0.8rem;
+		color: #ccc;
+		top: -1.6rem;
+		left: 0;
+	}
+	select:focus,
+	input:focus,
+	textarea:focus {
+		outline: none;
+	}
+	select:focus ~ .control-label,
+	input:focus ~ .control-label,
+	textarea:focus ~ .control-label {
+		color: #ccc;
+	}
+	.bar {
+		position: relative;
+		border-bottom: 0.0625rem solid #ccc;
+		display: block;
+		&::before {
+			content: '';
+			height: 0.125rem;
+			width: 0;
+			left: 50%;
+			bottom: -0.0625rem;
+			position: absolute;
+			background: #1E79D2;
+			transition: left 0.28s ease, width 0.28s ease;
+			z-index: 2;
+		}
+	}
+	select:focus ~ .bar::before,
+	input:focus ~ .bar::before,
+	textarea:focus ~ .bar::before {
+		width: 100%;
+		left: 0;
+	}
+}
+
+.checkbox label,
+.form-radio label {
+	position: relative;
+	cursor: pointer;
+	text-align: left;
+	padding-left: 2rem;
+	color: #000;
+	display: block;
+}
+
+.checkbox input,
+.form-radio input {
+	width: auto;
+	opacity: 0.00000001;
+	position: absolute;
+	left: 0;
+}
+
+.radio {
+	margin-bottom: 1rem;
+	label:hover .helper {
+		color: #1E79D2;
+	}
+	input:checked ~ .helper::after {
+		transform: scale(0.5);
+	}
+	input:checked ~ .helper::before {
+		color: #1E79D2;
+	}
+	.helper {
+		position: absolute;
+		top: 0;
+		left: -0.25rem;
+		cursor: pointer;
+		display: block;
+		font-size: 1rem;
+		user-select: none;
+		color: #1E79D2;
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			margin: 0.25rem;
+			width: 1rem;
+			height: 1rem;
+			transition: transform 0.28s ease;
+			transition: transform 0.28s ease, -webkit-transform 0.28s ease;
+			border-radius: 50%;
+			border: 0.125rem solid currentColor;
+		}
+		&::after {
+			transform: scale(0);
+			background-color: #1E79D2;
+			border-color: #1E79D2;
+		}
+	}
+}
+.checkbox {
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	label:hover .helper {
+		color: #1E79D2;
+	}
+	input:checked ~ .helper {
+		color: #1E79D2;
+	}
+	input:checked ~ .helper::after,
+	input:checked ~ .helper::before {
+		opacity: 1;
+		transition: height 0.28s ease;
+	}
+	input:checked ~ .helper::after {
+		height: 0.5rem;
+	}
+	input:checked ~ .helper::before {
+		height: 1.2rem;
+		transition-delay: 0.28s;
+	}
+	.helper {
+		color: #1E79D2;
+		position: absolute;
+		top: 0.28rem;
+		left: 0;
+		width: 1rem;
+		height: 1rem;
+		z-index: 0;
+		border: 0.125rem solid currentColor;
+		border-radius: 0.0625rem;
+		transition: border-color 0.28s ease;
+		&::before, &::after {
+			position: absolute;
+			height: 0;
+			width: 0.2rem;
+			background-color: #1E79D2;
+			display: block;
+			transform-origin: left top;
+			border-radius: 0.25rem;
+			content: '';
+			transition: opacity 0.28s ease, height 0s linear 0.28s;
+			opacity: 0;
+		}
+		&::before {
+			top: 0.65rem;
+			left: 0.38rem;
+			transform: rotate(-135deg);
+			box-shadow: 0 0 0 0.0625rem #fff;
+		}
+		&::after {
+			top: 0.3rem;
+			left: 0;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+	margin-top: 1rem;
+}
+
+.has-error .legend.legend, 
+.has-error.form-group .control-label.control-label {
+	color: blue;
+}
+
+.has-error.form-group .form-help,
+.has-error.form-group .helper, 
+.has-error.checkbox .form-help,
+.has-error.checkbox .helper, 
+.has-error.radio .form-help,
+.has-error.radio .helper, 
+.has-error.form-radio .form-help,
+.has-error.form-radio .helper {
+	color: blue;
+}
+
+.has-error .bar::before {
+	background: blue;
+	left: 0;
+	width: 100%;
+}
+
+.button {
+	position: relative;
+	background: $primary;
+	border: 1px solid $primary;
+	font-size: 1.1rem;
+	color: #1e79d2;
+	margin: 3rem 0;
+	padding: 0.75rem 3rem;
+	cursor: pointer;
+	transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+	overflow: hidden;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	&::before {
+		content: '';
+		position: absolute;
+		background: #43A047;
+		border: 50vh solid #43A047;
+		width: 30vh;
+		height: 30vh;
+		border-radius: 50%;
+		display: block;
+		top: 50%;
+		left: 50%;
+		z-index: 0;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(0);
+	}
+	&:hover {
+		color: #43A047;
+		box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+	}
+	&:active::before,
+	&:focus::before {
+		transition: opacity 0.28s ease 0.364s;
+		transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
+		transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0;
+	}
+	&:focus {
+		outline: none;
+	}
+	span {
+		color: #fff;
+		position: relative;
+		z-index: 1;
+	}
+}

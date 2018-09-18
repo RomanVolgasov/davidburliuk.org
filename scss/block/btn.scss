@@ -1,0 +1,39 @@
+.mobile .btn {
+	@media (max-width: 768px) {
+		text-align: center;
+	}
+}
+
+.btn {
+	background-color: $primary;
+	color: $hover;
+	display: inline-block;
+	padding: 1.8rem 3rem;
+	text-transform: uppercase;
+	margin-right: 2rem;
+	margin-top: 2rem;
+	transition: .2s;
+	&:hover {
+		text-decoration: none;
+		transition: .2s;
+		box-shadow: -8px -8px 0 #FFF, -10px -10px 0 #000, -6px -10px 0 #000, -10px -6px 0 #000;
+	}
+	&.arrow {
+		padding-right: 5rem;
+	}
+	&.arrow::after {
+		content: "";
+		background-image: url("../img/btn.svg");
+		background-repeat: no-repeat;
+		position: absolute;
+		height: 12px;
+		width: 12px;
+		bottom: 1.4rem;
+		right: 2rem;
+		transition: .2s;
+	}
+	&.arrow:hover::after {
+		right: 1.6rem;
+		transition: .2s;
+	}
+}

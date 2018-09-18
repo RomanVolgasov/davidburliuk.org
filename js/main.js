@@ -1,38 +1,24 @@
-(function($) {
-	$(function() {
-		$('.nabar__toggle').click(function() {
-			$('nav').toggleClass('show');
-			$('.nabar__toggle').toggleClass('-active');
-		});
-	});
-})(jQuery);
+(function() {
 
-// function Hamburger(x) {
-// 	x.classList.toggle("-active");
-// }
+	var getTriggerElement = function(el) {
+		var isCollapse = el.getAttribute('data-collapse');
+		if (isCollapse !== null) {
+			return el;
+		} else {
+			var isParentCollapse = el.parentNode.getAttribute('data-collapse');
+			return (isParentCollapse !== null) ? el.parentNode : undefined;
+		}
+	};
 
-(function (d, w, c) {
-	(w[c] = w[c] || []).push(function() {
-		try {
-			w.yaCounter49804669 = new Ya.Metrika2({
-				id:49804669,
-				clickmap:true,
-				trackLinks:true,
-				accurateTrackBounce:true,
-				webvisor:true,
-				ut:"noindex"
-			});
-		} catch(e) { }
-	});
+	var collapseClickHandler = function(event) {
+		var triggerEl = getTriggerElement(event.target);
+		var targetEl = document.querySelector(triggerEl.getAttribute('data-target'));
+		if (targetEl) {
+			triggerEl.classList.toggle('-active');
+			targetEl.classList.toggle('-on');
+		}
+	};
 
-	var n = d.getElementsByTagName("script")[0],
-		s = d.createElement("script"),
-		f = function () { n.parentNode.insertBefore(s, n); };
-	s.type = "text/javascript";
-	s.async = true;
-	s.src = "https://mc.yandex.ru/metrika/tag.js";
+	document.addEventListener('click', collapseClickHandler, false);
 
-	if (w.opera == "[object Opera]") {
-		d.addEventListener("DOMContentLoaded", f, false);
-	} else { f(); }
-})(document, window, "yandex_metrika_callbacks2");
+})(document, window);

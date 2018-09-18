@@ -1,23 +1,15 @@
-// VAR
-$gray-900: #212121;
-$gray-100: #F5F5F5;
-
-::selection {
-	background-color: $gray-900;
-	color: $gray-100;
-}
+// Variables
+$white: #FFFFFF;
+$hover: #E0E0E0;
+$primary: #212121;
+$primary-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.12);
 
 @import "../scss/utility/css-reset.scss";
 @import "../scss/bootstrap/bootstrap-grid.scss";
-@import "../scss/magnific/main.scss";
 @import "../scss/utility/rfs.scss";
 @import "../scss/utility/font.scss";
-@import "../scss/block/header.scss";
 @import "../scss/block/nav.scss";
+@import "../scss/block/header.scss";
 @import "../scss/block/footer.scss";
-@import "../scss/block/gallery.scss";
-@import "../scss/element/btn.scss";
-
-.main {
-	min-height: calc(100vh - 149px);
-}
+@import "../scss/block/btn.scss";
+@import "../scss/block/form.scss";

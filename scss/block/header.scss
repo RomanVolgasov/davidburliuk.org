@@ -1,12 +1,7 @@
-.header {
-	height: 0;
-	@supports (height: 100vh) {
-		min-height: 100vh;
-		margin-bottom: 80px;
-	}
-	background-color: $gray-900;
-	background-image: url('../img/logo-white.svg');
+.header--fullscreen {
+	background-color: $primary;
+	background-image: url('../img/logo-big-white.svg');
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	// position: fixed;
+	min-height: 93.2vh;
 }
